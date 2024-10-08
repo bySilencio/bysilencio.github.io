@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, a, p {
 
 @media(min-width: 768px) {
     .container {
-        max-width: 768px;
+        max-width: 100%;
         padding: 0 32px;
     }
 }
@@ -54,6 +54,12 @@ h1 {
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 54px;
+    }
+}
+
 h2 {
     font-size: 40px;
     font-weight: 300;
@@ -61,9 +67,21 @@ h2 {
     color: #7E7A76;
 }
 
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
 h3 {
     font-size: 45px;
     margin: 24px 0;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 30px;
+    }
 }
 
 .heading-pink {
@@ -102,6 +120,13 @@ h5 {
 p {
     font-size: 30px;
     line-height: 40px;
+}
+
+@media (max-width: 1024px) {
+    p {
+        font-size: 24px;
+        line-height: 35px;
+    }
 }
 
 .motherhood-logo {
@@ -169,6 +194,19 @@ p {
     margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+    .cta-section {
+        display: block;
+        width: 100%;
+    }
+
+    .notify-btn {        
+        display: block;
+        width: 200px;
+        margin: 30px auto 0 auto;
+    }
+}
+
 .cta-text {
     font-size: 24px;
     line-height: 29px;
@@ -217,12 +255,37 @@ p {
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .background-image {
+        top: 440px;
+        height: 485px;
+    }
+}
+
 .mental-noise {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-top: 550px;
     margin: 0 48px;
+}
+
+@media (max-width: 1024px) {
+    .mental-noise {
+        padding-top: 350px;
+        display: block;        
+    }
+
+    .text-group {
+        max-width: 100% !important;
+    }
+
+    .app-image {
+        padding-top: 60px;
+        max-width: 320px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .text-group {
@@ -245,6 +308,16 @@ p {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
     width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .steps-grid {
+        display: block;        
+    }
+
+    .step {
+        margin: 24px 0;
+    }
 }
 
 .step {
@@ -284,6 +357,16 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .reviews-grid {
+        display: block;
+    }
+
+    .review {
+        margin: 30px 0;
+    }
 }
 
 .review {
@@ -342,6 +425,21 @@ footer hr {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+}
+
+@media (max-width: 1024px) {
+    .site-footer {
+        display: block;
+    }
+
+    .footer-left {
+        max-width: 100% !important;
+        display: block;
+    }
+
+    .footer-right {
+        margin-top: 30px;
+    }
 }
 
 .footer-left {
