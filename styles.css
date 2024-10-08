@@ -196,11 +196,9 @@ p {
 .audio-waveform img {
     width: 322px;
 }
-
 @media (max-width: 1024px) {
-    .audio-waveform img {
-        display: block;
-        max-width: 435px;
+    .audio-player img {
+        max-width: 100% !important;
     }
 }
 
@@ -307,19 +305,12 @@ p {
 
 @media (max-width: 1024px) {
     .mental-noise {
-        padding-top: 350px;
+        padding-top: 150px;
         display: block;        
     }
 
     .text-group {
         max-width: 100% !important;
-    }
-
-    .app-image {
-        padding-top: 60px;
-        max-width: 320px;
-        display: block;
-        margin: 0 auto;
     }
 }
 
@@ -330,6 +321,12 @@ p {
 .app-image {
     max-width: 350px;
     height: auto;
+}
+
+@media (max-width: 1024px) {
+    .app-image {
+        max-width: 100%;
+    }
 }
 
 .journey-steps {
