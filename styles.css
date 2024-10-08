@@ -57,6 +57,7 @@ h1 {
 @media (max-width: 1024px) {
     h1 {
         font-size: 54px;
+        line-height: 60px;
     }
 }
 
@@ -70,6 +71,7 @@ h2 {
 @media (max-width: 1024px) {
     h2 {
         font-size: 24px;
+        line-height: 28px;
     }
 }
 
@@ -117,6 +119,12 @@ h5 {
     color: color(display-p3 0.494 0.478 0.463);
 }
 
+@media (max-width: 1024px) {
+    h5 {
+        font-size: 20px;
+    }
+}
+
 p {
     font-size: 30px;
     line-height: 40px;
@@ -134,6 +142,13 @@ p {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .motherhood-logo {
+        display: block;
+        max-width: 337px;
+    }
 }
 
 .audio-preview {
@@ -182,6 +197,13 @@ p {
     width: 322px;
 }
 
+@media (max-width: 1024px) {
+    .audio-waveform img {
+        display: block;
+        max-width: 435px;
+    }
+}
+
 .cta-section {
     display: flex;
     flex-direction: column;
@@ -214,6 +236,13 @@ p {
     color: rgba(64, 45, 51, 0.5);
 }
 
+@media (max-width: 1024px) {
+    .cta-text {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
 .notify-btn {
     padding: 16px;
     width: 232px;
@@ -229,6 +258,12 @@ p {
     background-origin: border-box;
     background-clip: padding-box, border-box;
     border-radius: 16px;
+}
+
+@media (max-width: 1024px) {
+    .notify-btn {
+        font-size: 18px;
+    }
 }
 
 .journey {
@@ -314,10 +349,6 @@ p {
     .steps-grid {
         display: block;        
     }
-
-    .step {
-        margin: 24px 0;
-    }
 }
 
 .step {
@@ -327,6 +358,12 @@ p {
     border-radius: 24px;
     box-shadow: 0px 0px 8px rgba(109, 89, 62, 0.15);
     width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .step {
+        margin: 24px 0;
+    }
 }
 
 .step img {
@@ -339,6 +376,12 @@ p {
     font-size: 28px;
     font-weight: 500;
     text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .step p {
+        font-size: 18px;
+    }
 }
 
 .step-detail {
@@ -392,6 +435,12 @@ p {
     line-height: 32px;
     margin-bottom: 21px;
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .review-content {
+        font-size: 18px;
+    }
 }
 
 .review-details {
