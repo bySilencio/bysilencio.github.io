@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, a, p {
+    font-family: 'Inter', sans-serif;
+    color: #402D33;
+    color: color(display-p3 0.239 0.180 0.200);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+@media(min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+        max-width: 1512px;
+        padding: 0 60px;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 42px 0;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    font-family: 'EB Garamond', serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 110px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 32px;
+    color: #7E7A76;
+}
+
+h3 {
+    font-size: 45px;
+    margin: 24px 0;
+}
+
+.heading-pink {
+    background: linear-gradient(90deg, #F02100 0%, #DB81DF 41.5%);
+    background: linear-gradient(90deg, color(display-p3 0.867 0.231 0.000) 0%, color(display-p3 0.808 0.522 0.855) 41.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.heading-green {
+    background: linear-gradient(90deg, #006885 0%, #6759D4 100%);
+    background: linear-gradient(90deg, color(display-p3 0.067 0.400 0.510) 0%, color(display-p3 0.396 0.349 0.804) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+h4 {
+    font-family: 'EB Garamond', serif;
+    font-size: 45px;
+}
+
+h5 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin: 21px;
+    color: #7F7A76;
+    color: color(display-p3 0.494 0.478 0.463);
+}
+
+p {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.motherhood-logo {
+    width: 439px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.audio-preview {
+    text-align: center;
+    margin: 42px 0;
+}
+
+.preview-text {
+    font-size: 24px;
+    color: #FF699F;
+    margin-bottom: 10px;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD2E2;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.play-button {
+    background-color: #FF699F;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.play-button img {
+    width: 36px;
+}
+
+.audio-waveform {
+    display: flex;
+    align-items: center;
+}
+
+.audio-waveform img {
+    width: 322px;
+}
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    width: 676px;
+    background: linear-gradient(85.78deg, #FFDCE9 0%, #FFACCD 98.64%);
+    border-radius: 32px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: rgba(64, 45, 51, 0.5);
+}
+
+.notify-btn {
+    padding: 16px;
+    width: 232px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #402D33;
+    cursor: pointer;
+
+    border: 3px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+                      linear-gradient(0deg, rgba(255, 127, 173, 0.5), rgba(255, 30, 111, 0.5));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 16px;
+}
+
+.journey {
+    position: relative;
+    text-align: center;
+    padding: 42px 0;
+}
+
+.journey-content {
+    max-width: 800px;
+    text-align: left;
+}
+
+.background-image {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-image: url('images/mother-baby-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 1398px;
+    width: 100%;
+}
+
+.mental-noise {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 550px;
+    margin: 0 48px;
+}
+
+.text-group {
+    max-width: 550px;
+}
+
+.app-image {
+    max-width: 350px;
+    height: auto;
+}
+
+.journey-steps {
+    text-align: center;
+    padding: 140px 0;
+}
+
+.steps-grid {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px; /* 32px between rows, 24px between columns */
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 8px rgba(109, 89, 62, 0.15);
+    width: 100%;
+}
+
+.step img {
+    max-width: 90px; /* Set the size of the icon */
+    margin-right: 24px; /* 24px spacing between icon and text */
+}
+
+.step p {
+    margin: 0;
+    font-size: 28px; /* 30 points for the text */
+    font-weight: 500; /* Medium weight */
+    text-align: left; /* Text alignment is kept left */
+}
+
+.step-detail {
+    font-weight: 300 !important;
+}
+
+.reviews {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px rgba(109, 89, 62, 0.15);
+}
+
+.review-stars {
+    width: 130px;
+    margin: 8px 0;
+}
+
+.review-content {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 21px;
+    text-align: center;
+}
+
+.review-name {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.review-details {
+    font-size: 18px;
+    color: #7E7A76;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f1f7;
+}
+
+.footer-links,
+.social-links {
+    margin: 10px 0;
+}
+
+.footer-links a,
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: #000;
+}
+
