@@ -41,7 +41,7 @@ header {
     background-color: #fff;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     header {
         padding: 18px 0;
     }
@@ -60,7 +60,7 @@ h1 {
     text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 54px;
         line-height: 60px;
@@ -75,7 +75,7 @@ h2 {
     color: #7E7A76;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     h2 {
         font-size: 24px;
         line-height: 40px;
@@ -88,7 +88,7 @@ h3 {
     margin: 24px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     h3 {
         font-size: 30px;
     }
@@ -127,7 +127,7 @@ h5 {
     color: color(display-p3 0.494 0.478 0.463);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     h5 {
         font-size: 20px;
     }
@@ -138,7 +138,7 @@ p {
     line-height: 40px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     p {
         font-size: 24px;
         line-height: 35px;
@@ -152,7 +152,7 @@ p {
     margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .motherhood-logo {
         display: block;
         max-width: 337px;
@@ -204,7 +204,7 @@ p {
 .audio-waveform img {
     width: 322px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .audio-player img {
         max-width: 100% !important;
     }
@@ -222,7 +222,7 @@ p {
     margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .cta-section {
         border-radius: 24px;
         display: block;
@@ -238,7 +238,7 @@ p {
     color: rgba(64, 45, 51, 0.5);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .cta-text {
         font-size: 20px;
         line-height: 25px;
@@ -266,7 +266,7 @@ p {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .notify-btn {
         font-size: 18px;
         display: block;
@@ -298,7 +298,7 @@ p {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .background-image {
         top: 440px;
         height: 485px;
@@ -313,7 +313,7 @@ p {
     margin: 0 48px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .mental-noise {
         padding-top: 200px;
         display: block;
@@ -334,7 +334,7 @@ p {
     height: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .app-image {
         margin-top: 40px;
         max-width: 100%;
@@ -346,7 +346,7 @@ p {
     padding-top: 140px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .journey-steps {
         padding-top: 60px;
     }
@@ -359,7 +359,7 @@ p {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .steps-grid {
         margin: 18px 0;
         display: block;        
@@ -375,7 +375,7 @@ p {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .step {
         margin: 18px 0;
         padding: 18px;
@@ -387,7 +387,7 @@ p {
     margin-right: 24px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .step img {
         max-width: 60px;
     }
@@ -400,7 +400,7 @@ p {
     text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .step p {
         font-size: 18px;
         line-height: 28px;
@@ -416,7 +416,7 @@ p {
     padding: 80px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .reviews {
         padding: 60px 0;
     }
@@ -431,7 +431,7 @@ p {
     padding-top: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .reviews-grid {
         display: block;
         padding-top: 0px;
@@ -451,7 +451,7 @@ p {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .review {
         margin: 30px 0;
     }
@@ -469,7 +469,7 @@ p {
     text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .review-content {
         font-size: 20px;
     }
@@ -508,7 +508,7 @@ footer hr {
     padding: 30px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .site-footer {
         display: block;
     }
