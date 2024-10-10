@@ -41,6 +41,12 @@ header {
     background-color: #fff;
 }
 
+@media (max-width: 1024px) {
+    header {
+        padding: 18px 0;
+    }
+}
+
 h1 {
     font-size: 90px;
     font-weight: 600;
@@ -58,6 +64,7 @@ h1 {
     h1 {
         font-size: 54px;
         line-height: 60px;
+        margin: 18px 0;
     }
 }
 
@@ -71,7 +78,8 @@ h2 {
 @media (max-width: 1024px) {
     h2 {
         font-size: 24px;
-        line-height: 28px;
+        line-height: 40px;
+        margin: 40px 12px;
     }
 }
 
@@ -81,7 +89,7 @@ h3 {
 }
 
 @media (max-width: 1024px) {
-    h2 {
+    h3 {
         font-size: 30px;
     }
 }
@@ -216,14 +224,10 @@ p {
 
 @media (max-width: 1024px) {
     .cta-section {
+        border-radius: 24px;
         display: block;
         width: 100%;
-    }
-
-    .notify-btn {        
-        display: block;
-        width: 200px;
-        margin: 30px auto 0 auto;
+        padding: 18px 12px;
     }
 }
 
@@ -244,7 +248,7 @@ p {
 .notify-btn {
     display: inline-block;
     padding: 16px;
-    width: 232px;
+    max-width: 232px;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -265,6 +269,8 @@ p {
 @media (max-width: 1024px) {
     .notify-btn {
         font-size: 18px;
+        display: block;
+        margin: 18px auto 0 auto;
     }
 }
 
@@ -309,8 +315,9 @@ p {
 
 @media (max-width: 1024px) {
     .mental-noise {
-        padding-top: 150px;
-        display: block;        
+        padding-top: 200px;
+        display: block;
+        margin: 0 16px;     
     }
 
     .text-group {
@@ -329,6 +336,7 @@ p {
 
 @media (max-width: 1024px) {
     .app-image {
+        margin-top: 40px;
         max-width: 100%;
     }
 }
@@ -338,6 +346,11 @@ p {
     padding-top: 140px;
 }
 
+@media (max-width: 1024px) {
+    .journey-steps {
+        padding-top: 60px;
+    }
+}
 .steps-grid {
     margin: 40px 0;
     display: grid;
@@ -348,6 +361,7 @@ p {
 
 @media (max-width: 1024px) {
     .steps-grid {
+        margin: 18px 0;
         display: block;        
     }
 }
@@ -363,13 +377,20 @@ p {
 
 @media (max-width: 1024px) {
     .step {
-        margin: 24px 0;
+        margin: 18px 0;
+        padding: 18px;
     }
 }
 
 .step img {
     max-width: 90px;
     margin-right: 24px;
+}
+
+@media (max-width: 1024px) {
+    .step img {
+        max-width: 60px;
+    }
 }
 
 .step p {
@@ -382,6 +403,7 @@ p {
 @media (max-width: 1024px) {
     .step p {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -392,6 +414,12 @@ p {
 .reviews {
     text-align: center;
     padding: 80px 0;
+}
+
+@media (max-width: 1024px) {
+    .reviews {
+        padding: 60px 0;
+    }
 }
 
 .reviews-grid {
@@ -406,10 +434,7 @@ p {
 @media (max-width: 1024px) {
     .reviews-grid {
         display: block;
-    }
-
-    .review {
-        margin: 30px 0;
+        padding-top: 0px;
     }
 }
 
@@ -426,6 +451,12 @@ p {
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .review {
+        margin: 30px 0;
+    }
+}
+
 .review-stars {
     width: 130px;
     margin: 16px 0;
@@ -440,7 +471,7 @@ p {
 
 @media (max-width: 1024px) {
     .review-content {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
