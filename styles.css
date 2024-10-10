@@ -242,14 +242,17 @@ p {
 }
 
 .notify-btn {
+    display: inline-block;
     padding: 16px;
     width: 232px;
+    text-align: center;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     color: #402D33;
     cursor: pointer;
+    text-decoration: none;
     border: 3px solid transparent;
     background-image: linear-gradient(#fff, #fff),
                       linear-gradient(0deg, rgba(255, 127, 173, 0.5), rgba(255, 30, 111, 0.5));
@@ -257,6 +260,7 @@ p {
     background-clip: padding-box, border-box;
     border-radius: 16px;
 }
+
 
 @media (max-width: 1024px) {
     .notify-btn {
