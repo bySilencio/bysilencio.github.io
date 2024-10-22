@@ -8,7 +8,7 @@ body {
     background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, a, p {
+h1, h2, h3, h4, h5, a, p, select, input {
     font-family: 'Inter', sans-serif;
     color: #402D33;
     color: color(display-p3 0.239 0.180 0.200);
@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, a, p {
 }
 
 .container {
+    position: relative;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -386,7 +387,7 @@ input[type="email"]:focus {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    background-image: url('images/mother-baby-background-v2.png');
+    background-image: url('../images/mother-baby-background-v2.png');
     background-position: center;
     background-size: 1392px 693px;
     background-repeat: no-repeat;
@@ -686,3 +687,53 @@ footer hr {
 .social-link:hover {
     background-color: #f0f0f0;
 }
+
+
+#content {
+    text-align: center;
+  }
+  
+  .language-dropdown {
+    position: absolute;
+    top: 50px; /* Aligns with the top of the container */
+    right: 0; /* Aligns the dropdown to the right of the container */
+    margin-top: 10px; /* Adjust the margin from the top as needed */
+}
+
+  /* Native Dropdown Styles */
+  .dropdown-native {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid rgba(204, 204, 204, 0.5); /* 0.5 is 50% transparency */
+    border-radius: 5px;
+    appearance: none; /* Remove default arrow for custom appearance */
+  }
+  
+  /* Hover and Focus States */
+  .dropdown-native:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .dropdown-native:focus {
+    outline: none;
+    border-color: #888;
+  }
+  
+  /* Custom Arrow for Dropdown */
+  .dropdown-native {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='%23666666' d='M12 15.6l-8.1-8.1 1.5-1.5L12 12.6l6.6-6.6 1.5 1.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .dropdown-native {
+        width: 100%;
+    }
+  }
+  
+  
