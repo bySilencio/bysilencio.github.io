@@ -94,15 +94,6 @@ h3 {
     }
 }
 
-.heading-pink {
-    background: linear-gradient(90deg, #F02100 0%, #DB81DF 41.5%);
-    background: linear-gradient(90deg, color(display-p3 0.867 0.231 0.000) 0%, color(display-p3 0.808 0.522 0.855) 41.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
 .heading-green {
     background: linear-gradient(90deg, #006885 0%, #6759D4 100%);
     background: linear-gradient(90deg, color(display-p3 0.067 0.400 0.510) 0%, color(display-p3 0.396 0.349 0.804) 100%);
@@ -174,7 +165,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFD2E2;
+    background: linear-gradient(85.78deg, #FFDCE9 0%, #FFACCD 98.64%);
     padding: 10px 20px;
     border-radius: 50px;
     width: fit-content;
