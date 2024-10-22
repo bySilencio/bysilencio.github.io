@@ -22,9 +22,8 @@ const loadLanguage = async (lang) => {
 
 // Function to switch language and save user preference
 const switchLanguage = (lang) => {
-  window.history.replaceState(null, null, `/${lang}/`); // Update URL
-  localStorage.setItem('preferredLanguage', lang);      // Save preference
-  loadLanguage(lang);                                   // Load new language
+  localStorage.setItem('preferredLanguage', lang);      // Save language preference
+  loadLanguage(lang);                                   // Load the selected language without changing URL
 };
 
 // Add event listener to the language dropdown
@@ -32,9 +31,8 @@ document.getElementById('language-select').addEventListener('change', (event) =>
   switchLanguage(event.target.value);
 });
 
-// Check for a saved language preference or use the URL to determine language
-const savedLanguage = localStorage.getItem('preferredLanguage');
-const currentLang = window.location.pathname.includes('/fr') ? 'fr' : savedLanguage || 'en';
+// Check for a saved language preference or default to English
+const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
 
 // Load the appropriate language on page load
-loadLanguage(currentLang);
+loadLanguage(savedLanguage);
