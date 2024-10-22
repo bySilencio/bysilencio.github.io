@@ -449,7 +449,7 @@ input[type="email"]:focus {
 
 .journey-steps {
     text-align: center;
-    padding-top: 140px;
+    padding-top: 200px;
 }
 
 @media (max-width: 768px) {
@@ -519,7 +519,7 @@ input[type="email"]:focus {
 
 .reviews {
     text-align: center;
-    padding: 80px 0;
+    padding: 160px 0;
 }
 
 @media (max-width: 768px) {
