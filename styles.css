@@ -416,7 +416,7 @@ input[type="email"]:focus {
     align-items: center;
     justify-content: space-around;
     padding-top: 550px;
-    margin: 0 48px;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -637,7 +637,7 @@ footer hr {
 }
 
 .footer-logo {
-    width: 120px;
+    width: 167px;
     margin-bottom: 20px;
 }
 
