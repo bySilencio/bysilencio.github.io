@@ -228,97 +228,58 @@ p {
 }
 
 .cta-section {
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px;
     gap: 16px;
-    width: 676px;
     background: linear-gradient(85.78deg, #FFDCE9 0%, #FFACCD 98.64%);
     border-radius: 32px;
     margin: 0 auto;
     text-align: center;
-}
-
-@media (max-width: 768px) {
+    max-width: 676px;
+  }
+  
+  @media (max-width: 768px) {
     .cta-section {
-        border-radius: 24px;
-        display: block;
-        width: 100%;
-        padding: 18px 12px;
+      border-radius: 24px;
+      display: block;
+      width: 100%;
+      padding: 18px 12px;
     }
-}
-
-.cta-text {
+  }
+  
+  .cta-text {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
     color: rgba(64, 45, 51, 0.5);
-}
-
-@media (max-width: 768px) {
+    margin: 0 0 24px 0;
+  }
+  
+  @media (max-width: 768px) {
     .cta-text {
-        font-size: 20px;
-        line-height: 25px;
+      font-size: 20px;
+      line-height: 25px;
     }
-}
+  }
+  
 
-.input-area {
+  .input-area {
     display: flex;
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Align the items vertically */
     gap: 16px; /* Space between input and button */
     width: 100%;
-    max-width: 600px; /* Control the maximum width */
-}
-
-.notify-btn {
-    position: relative;
-    border-radius: 50px; /* Rounded corners */
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: white; /* White text */
-    cursor: pointer;
-    text-decoration: none;
-    /* Background gradient with glossy effect at the very top */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 20%, #FF006D 100%);
-    border: none; /* No default border */
-    z-index: 1; /* Ensure text stays above the gradient border */
-    flex-shrink: 0; /* Prevent the button from shrinking */
-    padding: 12px 24px; /* Adjust the padding for the button */
-}
-
-.notify-btn::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50px; /* Match the rounded corners */
-    background: linear-gradient(to right, rgba(255, 127, 173, 0.5), rgba(255, 30, 111, 0.5)); /* Border gradient: left to right */
-    z-index: -1; /* Place behind the button content */
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    .notify-btn {
-        font-size: 18px;
-        display: block;
-        margin: 18px auto 0 auto;
-        width: 100%; /* Full width on small screens */
+  }
+  
+  @media (max-width: 768px) {
+    .input-area {
+      flex-direction: column;
+      gap: 12px; /* Reduce gap on smaller screens */
     }
-}
-
-input[type="email"] {
+  }
+  
+  input[type="email"] {
     position: relative;
     flex: 1; /* Allow the input to grow and fill the remaining space */
     width: 100%;
@@ -333,13 +294,13 @@ input[type="email"] {
     outline: none; /* Remove focus outline */
     z-index: 1; /* Keep content above the gradient border */
     box-sizing: border-box;
-}
-
-input[type="email"]::placeholder {
+  }
+  
+  input[type="email"]::placeholder {
     color: #7E7A76; /* Placeholder color */
-}
-
-input[type="email"]::before {
+  }
+  
+  input[type="email"]::before {
     content: "";
     position: absolute;
     top: -3px;
@@ -352,24 +313,128 @@ input[type="email"]::before {
     background-origin: border-box;
     background-clip: padding-box, border-box;
     box-sizing: border-box;
-}
-
-input[type="email"]:focus {
+  }
+  
+  input[type="email"]:focus {
     outline: none; /* Remove focus outline */
     box-shadow: 0 0 8px rgba(255, 127, 173, 0.5); /* Optional focus shadow effect */
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* Base notify button */
+  .notify-btn {
+    width: 180px;
+    height: 65px;
+    position: relative;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 20%, #FF006D 100%);
+    border: none;
+    z-index: 1;
+    flex-shrink: 0;
+    padding: 12px 24px;
+    transition: background 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions for background and shadow */
+  }
+  
+  .notify-btn::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgba(255, 127, 173, 0.5), rgba(255, 30, 111, 0.5));
+    z-index: -1;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-sizing: border-box;
+    transition: background 0.4s ease; /* Smooth transition for the gradient */
+  }
+  
+  /* Hover effect with smaller box shadow */
+  .notify-btn:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 20%, #FF408C 100%);
+    box-shadow: 0 0 10px rgba(255, 102, 178, 0.5), 0 0 20px rgba(255, 0, 109, 0.5), 0 0 30px rgba(255, 30, 111, 0.7);
+  }
+  
+  .notify-btn:hover::before {
+    background: linear-gradient(to right, rgba(255, 127, 173, 0.7), rgba(255, 66, 109, 0.7));
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Checkmark (without circle) */
+  .checkmark {
+    display: inline-block;
+    width: 28px;  /* Width of the checkmark container */
+    height: 28px; /* Height of the checkmark container */
+    position: relative;
+  }
+  
+  .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 0px;   /* Adjust top to keep the checkmark centered vertically */
+    left: 8px;  /* Move the checkmark 2px to the right */
+    width: 7px; /* Checkmark width */
+    height: 18px; /* Longer checkmark height for longer tail */
+    border: solid white;
+    border-width: 0 3px 3px 0; /* Thicker checkmark */
+    transform: rotate(45deg); /* Rotate to create the checkmark */
+  }
+  
+  
+  /* Loading and checkmark styles: ensure button remains same size */
+  .notify-btn.loading,
+  .notify-btn .checkmark {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
     .input-area {
-        flex-direction: column; /* Stack input and button vertically on small screens */
-        gap: 12px;
+      flex-direction: column;
+      gap: 12px;
     }
-
+  
     input[type="email"] {
-        width: 100%; /* Full width on small screens */
+      width: 100%;
     }
-}
-
+  
+    .notify-btn {
+      font-size: 18px;
+      display: block;
+      margin: 18px auto 0 auto;
+      width: 100%;
+    }
+  }
+  
 .journey {
     position: relative;
     text-align: center;
