@@ -417,12 +417,7 @@ p {
     }
   }
   
-  @media (max-width: 768px) {
-    .input-area {
-      flex-direction: column;
-      gap: 12px;
-    }
-  
+  @media (max-width: 768px) {   
     input[type="email"] {
       width: 100%;
     }
@@ -759,11 +754,21 @@ footer hr {
   }
   
   .language-dropdown {
+    width: 130px;
     position: absolute;
     top: 50px; /* Aligns with the top of the container */
     right: 0; /* Aligns the dropdown to the right of the container */
     margin-top: 10px; /* Adjust the margin from the top as needed */
 }
+
+@media (max-width: 768px) {
+    .language-dropdown {
+        position: relative;
+        display: grid;        
+        margin: 24px auto 0 auto;
+        top: 0;
+    }
+  }
 
   /* Native Dropdown Styles */
   .dropdown-native {
