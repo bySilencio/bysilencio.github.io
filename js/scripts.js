@@ -57,7 +57,7 @@ document.getElementById("subscribe-form").addEventListener("submit", async (e) =
 
   try {
     const response = await fetch(
-      "https://9vpx1a5sb3.execute-api.eu-north-1.amazonaws.com/prod/subscribe",
+      "https://8fx941lll1.execute-api.eu-north-1.amazonaws.com/submit",  // Updated URL
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
