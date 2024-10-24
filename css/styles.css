@@ -285,8 +285,7 @@ p {
 
 @media (max-width: 768px) {
   .input-area {
-    flex-direction: column;
-    gap: 12px; /* Reduce gap on smaller screens */
+    display: block;
   }
 }
 
@@ -333,6 +332,14 @@ input[type="email"]::before {
 input[type="email"]:focus {
   outline: none; /* Remove focus outline */
   box-shadow: 0 0 8px rgba(255, 127, 173, 0.5); /* Optional focus shadow effect */
+}
+
+@media (max-width: 768px) {
+    input[type="email"] {
+      width: 100%;
+      font-size: 22px;
+      height: auto;
+    }
 }
 
 /* Base notify button */
@@ -404,6 +411,16 @@ input[type="email"]:focus {
   );
 }
 
+@media (max-width: 768px) {
+    .notify-btn {
+      height: 50px;
+      font-size: 22px;
+      display: block;
+      margin: 16px auto 0 auto;
+      width: 100%;
+    }
+}
+
 /* Loading spinner */
 .spinner {
   width: 28px;
@@ -447,19 +464,6 @@ input[type="email"]:focus {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 768px) {
-  input[type="email"] {
-    width: 100%;
-  }
-
-  .notify-btn {
-    font-size: 18px;
-    display: block;
-    margin: 18px auto 0 auto;
-    width: 100%;
   }
 }
 
