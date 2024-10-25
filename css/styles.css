@@ -30,14 +30,11 @@ input {
   margin: 0 auto;
   padding: 0 24px;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .container {
-    max-width: 100%;
     padding: 0 32px;
   }
 }
-
 @media (min-width: 1024px) {
   .container {
     max-width: 1512px;
