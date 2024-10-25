@@ -411,27 +411,18 @@ input[type="email"]:focus {
 .journey-content {
   max-width: 800px;
   text-align: left;
+  margin-bottom: -150px; /* Negative margin to push the text over the image */
+  z-index: 1; /* Ensure the text is on top of the image */
+  position: relative;
 }
 
 .background-image {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  background-image: url("../images/mother-baby-background-v2.png");
-  background-position: center;
-  background-size: 1392px 693px;
-  background-repeat: no-repeat;
-  height: 693px;
+  display: block;
+  margin: 0 auto;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .background-image {
-    top: 440px;
-    height: 485px;
-  }
+  height: auto;
+  z-index: 0; /* Keep the image behind the text */
+  position: relative;
 }
 
 .mental-noise-background {
@@ -444,7 +435,7 @@ input[type="email"]:focus {
   width: 100%;
   height: 400px;
   position: absolute;
-  transform: translateY(360px);
+  transform: translateY(-78px);
   z-index: -2;
 }
 
