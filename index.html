@@ -21,16 +21,17 @@
             <img src="images/motherhood-by-silencio.png" alt="Motherhood by Silencio" class="motherhood-logo">
             <h1 data-locale="main-heading">Loading...</h1>
             <h2 data-locale="sub-heading">Loading...</h2>
+
             <section class="audio-preview">
-                <p class="preview-text" data-locale="audio-preview-text">Loading...</p>
-                <div class="audio-player">
-                    <div class="play-button">
-                        <img src="images/play-icon.png" alt="Play Button">
+                <p class="preview-text" data-locale="audio-preview-text">Loading...</p>                
+                <div id="player">
+                    <div id="controls">
+                      <button id="play-button" aria-label="Play">
+                        <img id="play-icon" src="images/play-icon.png" alt="Play Button">
+                      </button>
+                      <div id="waveform"></div>
                     </div>
-                    <div class="audio-waveform">
-                        <img src="images/waveform.png" alt="Audio Waveform">
-                    </div>
-                </div>
+                  </div>
             </section>
 
             <section class="cta-section">
@@ -168,6 +169,7 @@
         </footer>
     </div>
 
+    <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="js/localization.js"></script>
     <script src="js/subscribe.js"></script>
     <script src="js/audioPlayer.js"></script>

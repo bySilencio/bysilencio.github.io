@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     height: 55,
   });
 
-  wavesurfer.load('sample.m4a');
+  wavesurfer.load('/silencio-sample.m4a');
 
   playButton.addEventListener('click', () => {
     if (isPlaying) {
