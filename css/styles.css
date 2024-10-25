@@ -248,8 +248,8 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: nowrap; /* Ensures button and waveform stay side-by-side */
-  width: 100%; /* Allows responsive resizing */
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 #play-button {
@@ -266,7 +266,7 @@ p {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 0 0 1.5px rgba(255, 127, 173, 0.5),
-    0 0 0 3px rgba(255, 30, 111, 0.5); /* Thinner gradient border effect */
+    0 0 0 3px rgba(255, 30, 111, 0.5);
 }
 
 #play-button img {
@@ -277,11 +277,11 @@ p {
 
 #play-button:hover {
   box-shadow: 0 0 6px rgba(255, 102, 178, 0.5), 0 0 10px rgba(255, 0, 109, 0.4),
-    0 0 15px rgba(255, 30, 111, 0.5); /* Refined glow effect */
+    0 0 15px rgba(255, 30, 111, 0.5);
 }
 
 #waveform {
-  flex-grow: 1; /* Allows waveform to fill remaining space */
+  flex-grow: 1;
   height: 55px;
   border-radius: 10px;
   overflow: hidden;
@@ -552,8 +552,8 @@ input[type="email"]:focus {
 .journey-content {
   max-width: 800px;
   text-align: left;
-  margin-bottom: -220px; /* Negative margin to push the text over the image */
-  z-index: 1; /* Ensure the text is on top of the image */
+  margin-bottom: -220px;
+  z-index: 1;
   position: relative;
 }
 
@@ -568,7 +568,7 @@ input[type="email"]:focus {
   margin: 0 auto;
   width: 100%;
   height: auto;
-  z-index: 0; /* Keep the image behind the text */
+  z-index: 0;
   position: relative;
 }
 
@@ -591,41 +591,41 @@ input[type="email"]:focus {
 
 .mental-noise {
   display: flex;
-  justify-content: center; /* Center the content as a whole */
-  align-items: center; /* Vertically center the elements */
-  gap: 180px; /* Space between the text and image */
+  justify-content: center;
+  align-items: center;
+  gap: 180px;
   padding: 50px 0;
 }
 
 @media (max-width: 768px) {
   .mental-noise {
-    flex-direction: column; /* Stack text and image vertically on small screens */
+    flex-direction: column;
     padding-top: 50px;
     gap: 80px;
   }
 }
 
 .text-group {
-  max-width: 550px; /* Set the maximum width for the text group */
-  text-align: left; /* Align text to the left */
+  max-width: 550px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
   .text-group {
-    max-width: 100%; /* Ensure the text takes full width on smaller screens */
-    margin-bottom: 20px; /* Add some space between the text and image */
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
 
 .app-image {
-  max-width: 350px; /* Set the maximum width for the image */
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain the aspect ratio of the image */
+  max-width: 350px;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
   .app-image {
-    max-width: 70%; /* Make the image responsive on mobile */
+    max-width: 70%;
   }
 }
 
