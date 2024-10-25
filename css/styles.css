@@ -797,7 +797,7 @@ footer hr {
 #controls {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: nowrap; /* Ensures button and waveform stay side-by-side */
   width: 100%; /* Allows responsive resizing */
 }
