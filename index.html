@@ -100,11 +100,14 @@
             <br />
             <p data-locale="session-text3">Loading...</p>
           </div>
-          <img
-            src="images/app-preview.png"
-            alt="App preview"
-            class="app-image"
-          />
+          <div class="iphone-frame">
+            <div class="screen-container">
+              <img src="images/screen1.png" alt="App Screen 1" class="app-screen active">
+              <img src="images/screen2.png" alt="App Screen 2" class="app-screen">
+              <img src="images/screen3.png" alt="App Screen 3" class="app-screen">
+              <!-- Add more screens as needed -->
+            </div>
+          </div>
         </section>
       </div>
     </section>
@@ -257,6 +260,7 @@
     </div>
 
     <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="js/rotatingScreens.js"></script>
     <script src="js/localization.js"></script>
     <script src="js/subscribe.js"></script>
     <script src="js/audioPlayer.js"></script>
