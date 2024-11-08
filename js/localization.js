@@ -1,3 +1,29 @@
+// Define language-specific image sets
+const languageImages = {
+  en: [
+    'images/english_screen1.png',
+    'images/english_screen2.png',
+    'images/english_screen3.png'
+  ],
+  fr: [
+    'images/french_screen1.png',
+    'images/french_screen2.png',
+    'images/french_screen3.png'
+  ]
+};
+
+// Function to update images based on language
+const loadImagesForLanguage = (lang) => {
+  const images = languageImages[lang] || languageImages['en']; // Fallback to English if language not found
+  const screenElements = document.querySelectorAll('.app-screen');
+  
+  screenElements.forEach((screen, index) => {
+    if (images[index]) {
+      screen.src = images[index];
+    }
+  });
+};
+
 // Fetch and apply language strings from the JSON file
 const loadLanguage = async (lang) => {
   try {
@@ -12,7 +38,12 @@ const loadLanguage = async (lang) => {
       }
     });
 
+    // Update the language select dropdown
     document.getElementById('language-select').value = lang;
+
+    // Load language-specific images
+    loadImagesForLanguage(lang);
+
   } catch (error) {
     console.error("Error loading language file:", error);
   }
