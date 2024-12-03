@@ -1,27 +1,64 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const playButton = document.getElementById('play-button');
-  const playIcon = document.getElementById('play-icon');
+  // Define language-specific audio files
+  const languageAudio = {
+    en: {
+      file: '/audio/english_sample.aac',
+      peaks: '/audio/english_sample.json',
+    },
+    fr: {
+      file: '/audio/french_sample.aac',
+      peaks: '/audio/french_sample.json',
+    },
+  };
+
+  let wavesurfer = null;
   let isPlaying = false;
 
-  // Fetch the pre-generated waveform data from JSON
-  const response = await fetch('/silencio-sample.json');
-  const peaks = await response.json();
+  const playButton = document.getElementById('play-button');
+  const playIcon = document.getElementById('play-icon');
 
-  const wavesurfer = WaveSurfer.create({
-    container: '#waveform',
-    waveColor: '#fff',
-    progressColor: '#FF699F',
-    responsive: true,
-    backend: 'mediaelement',  // Allows for streaming playback
-    barWidth: 4,
-    barGap: 2,
-    barRadius: 4,
-    height: 55,
-  });
+  // Initialize WaveSurfer instance
+  const initWaveSurfer = async (file, peaksUrl) => {
+    // Destroy existing instance if it exists
+    if (wavesurfer) {
+      wavesurfer.destroy();
+      wavesurfer = null;
+    }
 
-  // Load the audio file with the pre-generated peaks for faster rendering
-  wavesurfer.load('/silencio-sample.aac', peaks);
+    // Fetch the pre-generated waveform data
+    const response = await fetch(peaksUrl);
+    const peaks = await response.json();
 
+    // Create a new WaveSurfer instance
+    wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#fff',
+      progressColor: '#FF699F',
+      responsive: true,
+      backend: 'mediaelement', // Allows streaming playback
+      barWidth: 4,
+      barGap: 2,
+      barRadius: 4,
+      height: 55,
+    });
+
+    // Load the new audio file with peaks
+    wavesurfer.load(file, peaks);
+
+    // Reset play button icon when playback finishes
+    wavesurfer.on('finish', () => {
+      isPlaying = false;
+      playIcon.src = 'images/play-icon.png';
+    });
+  };
+
+  // Update audio based on language
+  const updateAudio = async (lang) => {
+    const audio = languageAudio[lang] || languageAudio['en']; // Fallback to English
+    await initWaveSurfer(audio.file, audio.peaks);
+  };
+
+  // Play/Pause functionality
   playButton.addEventListener('click', () => {
     if (isPlaying) {
       wavesurfer.pause();
@@ -33,8 +70,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     isPlaying = !isPlaying;
   });
 
-  wavesurfer.on('finish', () => {
-    isPlaying = false;
-    playIcon.src = 'images/play-icon.png';
+  // Fetch saved language or default to English
+  const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+  await updateAudio(savedLanguage);
+
+  // Update audio when language is switched
+  document.getElementById('language-select').addEventListener('change', async (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem('preferredLanguage', selectedLanguage);
+    await updateAudio(selectedLanguage);
   });
 });
