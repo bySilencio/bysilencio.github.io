@@ -52,9 +52,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   };
 
+  // Reset audio player to initial state
+  const resetAudioPlayer = () => {
+    if (wavesurfer) {
+      wavesurfer.pause(); // Pause the current audio
+      wavesurfer.seekTo(0); // Reset to the beginning
+    }
+    isPlaying = false; // Ensure playback state is reset
+    playIcon.src = 'images/play-icon.png'; // Update button to "Play" icon
+  };
+
   // Update audio based on language
   const updateAudio = async (lang) => {
     const audio = languageAudio[lang] || languageAudio['en']; // Fallback to English
+    resetAudioPlayer(); // Reset the player before switching audio
     await initWaveSurfer(audio.file, audio.peaks);
   };
 
